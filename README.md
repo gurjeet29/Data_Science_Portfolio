@@ -43,7 +43,13 @@ Repository containing portfolio of data science projects completed by me for sel
 	- [Face Emotion Recognition](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Face%20Emotion%20Recognition): Facial expression recognition is the task of classifying the expressions on face images into various categories such as anger, fear, surprise, sadness, happiness and so on.
 
 	- [Object Detection](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Object%20Detection%20Using%20SSD%20MobileNet): Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos.
+	
+	
+- ### Natural Language Processing (NLP)
 
-	___Tools: scikit-learn, Pandas, Seaborn, Matplotlib, numpy, tensorflow___
+	- [Twitter Sentiment Analysis by collecting data](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Twitter%20Sentiment%20Analysis%20by%20collecting%20data): A NLP model trained on self collected twitter hashtag data which classifies the sentiments of the sentences entered by the user.
+
+
+	___Tools: scikit-learn, Pandas, Seaborn, Matplotlib, Numpy, Tensorflow, Flask, NLTK, Keras___
 
 If you liked what you saw, want to have a chat with me about the portfolio, shoot an email at singhgurjeets2000@gmail.com
