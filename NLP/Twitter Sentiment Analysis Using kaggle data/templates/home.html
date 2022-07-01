@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analysis App</title>
+    <link href="../static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h2>Sentiment Analysis</h2>
+        </div>
+    </header>
+
+    <div class="ml-container">
+
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your review Here: </p>
+            <textarea name="review" rows="6" cols="50"></textarea>
+            <br />
+
+            <input type="submit" class="btn-info" value="Predict">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

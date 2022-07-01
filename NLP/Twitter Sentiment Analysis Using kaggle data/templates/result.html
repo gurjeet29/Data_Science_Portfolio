@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link href="../static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h2>Sentiment Analysis</h2>
+        </div>
+    </header>
+    <p style="color: rgb(255, 96, 96);font-size: 50px;text-align: center;"><b>Prediction:</b></p>
+    <div class="results">
+
+        {% if prediction == 0 %}
+        <h2 style="color:green; text-align: center;font-size: 35px;">Positive</h2>
+        {% elif prediction == 1 %}
+        <h2 style="color:red; text-align: center;font-size: 35px;">Negative</h2>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
