@@ -1,6 +1,6 @@
 Flask==2.1.2
 matplotlib==3.2.2
-numpy==1.21.3
+numpy==1.22.0
 opencv_python==4.5.3.56
 pandas==1.4.3
 scikit_learn==1.1.1
