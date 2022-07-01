@@ -47,7 +47,7 @@ Repository containing portfolio of data science projects completed by me for sel
 	
 - ### Natural Language Processing (NLP)
 
-	- [Twitter Sentiment Analysis by collecting data](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Twitter%20Sentiment%20Analysis%20by%20collecting%20data): A NLP model trained on self collected twitter hashtag data which classifies the sentiments of the sentences entered by the user.
+	- [Twitter Sentiment Analysis by collecting own data](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Twitter%20Sentiment%20Analysis%20by%20collecting%20data): A NLP model trained on self collected twitter hashtag data which classifies the sentiments of the sentences entered by the user.
 	
 	- [Twitter Sentiment Analysis](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Twitter%20Sentiment%20Analysis%20Using%20kaggle%20data): A NLP model trained on twitter data which classifies the sentiments of the sentences entered by the user.
 	
