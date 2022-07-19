@@ -54,6 +54,6 @@ Repository containing portfolio of data science projects completed by me for sel
 	- [Spam Classifier](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Spam%20Classifier): A NLP model to classifiy sentences or emails as SPAM or HAM.
 
 
-___Tools: scikit-learn, Pandas, Seaborn, Matplotlib, Numpy, Tensorflow, Flask, NLTK, Keras___
+___Tools: scikit-learn, Pandas, Seaborn, Matplotlib, Numpy, Tensorflow, Flask, NLTK, Keras, OpenCV___
 
 If you liked what you saw, want to have a chat with me about the portfolio, shoot an email at singhgurjeets2000@gmail.com
