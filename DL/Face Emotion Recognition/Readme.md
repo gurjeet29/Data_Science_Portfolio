@@ -65,9 +65,4 @@ Testing the model to check the accuracy of the model.
 
 
 
-## Achievement
-This project was designed for was to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset. Instead of tackling the MNIST sets, I wanted to do something different but just as similar. Typical MNIST dataset tutorials give you a preprocessed dataset all in one line of
-code. Where's the fun in that? Where's the data pre-processing? I opted for doing all that by myself and it seemed to work in my favor.
-
-
 **IF YOU FIND ANY ISSUES OR BUGS PLEASE OPEN AN ISSUE**
