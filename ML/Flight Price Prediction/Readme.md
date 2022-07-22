@@ -62,7 +62,7 @@ The model is evaluated on basis of `Root mean square error (RMSE)` and the accua
 The model is saved in a pickle file. Saving the model there would allow us to make predictions quicker.
 
 ## Testing
-Testing the model to check the accuracy of the model.
+Creating a web app to test the model.
 
 ![image](https://user-images.githubusercontent.com/84326897/180405804-2333eb14-c37b-4c5e-8ea6-dc6c2ff13327.png)
 
