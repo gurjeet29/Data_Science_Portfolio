@@ -64,7 +64,7 @@ The model is saved in a pickle file. Saving the model there would allow us to ma
 ## Testing
 Testing the model to check the accuracy of the model.
 
-
+![image](https://user-images.githubusercontent.com/84326897/180405804-2333eb14-c37b-4c5e-8ea6-dc6c2ff13327.png)
 
 ## Deployment
 The model is deployed on Heroku to do real-time prediction. You can find the deployed model on this link: https://flight-price-predict0.herokuapp.com/
