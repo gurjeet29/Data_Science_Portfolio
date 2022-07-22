@@ -1,5 +1,10 @@
 # Flight Price Prediction
 
+## Medium Blog
+You can find the whole project explained step by step in the blog link below:
+
+https://medium.com/@gurjeetsingh2000/flight-price-prediction-using-machine-learning-b7eb1cedcf96
+
 ## Project Objective
 Nowadays flight prices are quite unpredictable. The ticket prices change frequently. Customers are seeking to get the lowest price for their tickets, while airline companies are trying to keep their overall revenue as high as possible. Using technology it is actually possible to reduce the uncertainty of flight prices. The purpose of this project is to predict the flight prices using efficient machine learning techniques.
 
