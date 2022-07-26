@@ -57,4 +57,17 @@ To capture images:
 ```
 On pressing `a` the images will be captured and stored on the train path and on pressing `p` the images will be captured and stored on the test path.
 
+## Training
+**Using pre-trained weights of VGG19**
+
+In this method a pre-trained VGG19 network was taken from pre-trained model zoo, a output classifier for face detection was connected to the last fully connected layer of the VGG19 network. After that network was trained for 30 epochs. This model gave best validation accuracy of 100% and training accuracy of 100%.
+
+The model and the pre-trained weights are saved in an h5 file. Saving the model there would allow us to make detection quicker.
+
+## Accuracy and Loss Plot
+![image](https://user-images.githubusercontent.com/84326897/181083468-6672e038-da8b-483a-a75a-d1531f5263b9.png)
+
+## Testing
+To test the model `face_haar_cascade` is used from OpenCV which compares the image of webcam with the trained images in data and display the name of the person if the faces are matched.
+
 **IF YOU FIND ANY ISSUES OR BUGS PLEASE OPEN AN ISSUE**
