@@ -6,4 +6,4 @@
 	
   - [Spam Classifier](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Spam%20Classifier): A NLP model to classifiy sentences or emails as SPAM or HAM
 
-  - [Movies Recommendation System](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Movies%20Recommendation%20System): A NLP model which recommends moviees to user based on Cosine Similarity.
+  - [Movies Recommendation System](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Movies%20Recommendation%20System): A NLP model which recommends movies to users based on Cosine Similarity.
