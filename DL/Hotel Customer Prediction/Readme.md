@@ -140,22 +140,23 @@ A Rest API is created using Flask to check the accuracy of the model:
 
 Prediction when customer will check in:
 
-![local check](https://user-images.githubusercontent.com/84326897/185669197-94173fe2-fe6d-4af7-9be8-addad590b0f0.png)
+![local check](https://user-images.githubusercontent.com/84326897/185672039-30e692aa-f54b-4bdc-8cfb-85d30ec016ff.png)
 
 Prediction when customer will not check in:
 
-![local not check](https://user-images.githubusercontent.com/84326897/185669328-185493f6-a119-4a4f-b677-773a124f2120.png)
+![local not check](https://user-images.githubusercontent.com/84326897/185672070-d27ed65a-11ce-4edb-a999-939f287af5e5.png)
 
 ## Deployment
 The model created using the Flask's Rest API and is deployed using heroku to do real time predictions:
+**Deployed model link: https://hotel-customer-predictor.herokuapp.com/**
 
 Prediction when customer will check in:
 
-![heroku check](https://user-images.githubusercontent.com/84326897/185670042-a4fb9b66-3796-4588-bd90-a198fa52477f.png)
+![heroku check](https://user-images.githubusercontent.com/84326897/185672106-3dd4de76-f3ce-449f-8011-6ed219f1ce1c.png)
 
 Prediction when customer will not check in:
 
-![heroku not check](https://user-images.githubusercontent.com/84326897/185670136-9f815f11-1ffe-40cd-9ac4-dc211d922735.png)
+![heroku not check](https://user-images.githubusercontent.com/84326897/185672138-0a9f456b-ee10-4a87-91c6-04ceeff8178d.png)
 
 ## Achievement
 What this project is designed for is to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset.
