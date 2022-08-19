@@ -55,7 +55,7 @@ This project was developed off the data (provided [here](https://github.com/gurj
 * SRQuietRoom : Indication if the customer usually asks for a room away from the noise (0: No, 1: Yes)
 
 ## Training
-A function is created with the follwoing parameters:
+A function is created with the following parameters:
 ```
 optimizerL = ['SGD', 'Adam', 'RMSprop', 'Adadelta', 'Adagrad', 'Adamax', 'Nadam', 'Ftrl','SGD']
     
@@ -148,6 +148,7 @@ Prediction when customer will not check in:
 
 ## Deployment
 The model created using the Flask's Rest API and is deployed using heroku to do real time predictions:
+
 **Deployed model link: https://hotel-customer-predictor.herokuapp.com/**
 
 Prediction when customer will check in:
