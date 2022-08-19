@@ -27,11 +27,11 @@ This project was developed off the data (provided [here](https://github.com/gurj
 * ID : Customer ID
 * Nationality : Country of origin
 * Age : Customer's age (in years) at the last day of the extraction period
-* DaysSinceCreation	:	Number of days since the customer record was created (number of days elapsed between the creation date and the last day of the extraction period)
-* AverageLeadTime	: The average number of days elapsed between the customer's booking date and arrival date
+* DaysSinceCreation	: Number of days since the customer record was created (number of days elapsed between the creation date and the last day of the extraction period)
+* AverageLeadTime : The average number of days elapsed between the customer's booking date and arrival date
 * LodgingRevenue : Total amount spent on lodging expenses by the customer (in Euros)
 * OtherRevenue : Total amount spent on other expenses by the customer (in Euros)
-* BookingsCanceled :	Number of bookings the customer made but subsequently canceled (the costumer informed the hotel he/she would not come to stay)
+* BookingsCanceled : Number of bookings the customer made but subsequently canceled (the costumer informed the hotel he/she would not come to stay)
 * BookingsNoShowed : Number of bookings the customer made but subsequently made a “no-show” (did not cancel, but did not check-in to stay at the hotel)
 * BookingsCheckedIn : Number of bookings the customer made, and which end up with a staying
 * PersonsNights	: The total number of persons/nights that the costumer stayed at the hotel
@@ -55,8 +55,7 @@ This project was developed off the data (provided [here](https://github.com/gurj
 * SRQuietRoom : Indication if the customer usually asks for a room away from the noise (0: No, 1: Yes)
 
 ## Training
-A fucntion is created with the follwoing parameters:
-
+A function is created with the follwoing parameters:
 ```
 optimizerL = ['SGD', 'Adam', 'RMSprop', 'Adadelta', 'Adagrad', 'Adamax', 'Nadam', 'Ftrl','SGD']
     
@@ -127,23 +126,38 @@ model.summary()
         
 es = EarlyStopping(monitor='accuracy', mode='max', verbose=0, patience=20)
 ```
-The output layer consist of `1` neuron with activation function `sigmoid` and loss `binary_crossentropy`. After tharing the model the best max value obtained for accuracy wad `97.4%` and the best max value obtained for validation accuracy was `97.6%`.
+The output layer consist of `1` neuron with activation function `sigmoid` and loss `binary_crossentropy`. After training the model the best max value obtained for accuracy is `97.4%` and the best max value obtained for validation accuracy is `97.6%`.
 
 The model and the pre-trained weights are saved in an **h5** file. Saving the model there would allow us to make predictions quicker.
 
+## Accuracy and Loss Plot
+The Accuracy and Loss of the model is plotted to check the training of the model:
+
+![image](https://user-images.githubusercontent.com/84326897/185669642-e61cc533-c778-485b-9934-f904208ae9f3.png)
+
 ## Testing
-Testing the model to check the accuracy of the model.
+A Rest API is created using Flask to check the accuracy of the model:
 
-![Output](https://user-images.githubusercontent.com/84326897/179824138-f17cf8d7-f19f-4704-91a4-591af85dcb80.png)
+Prediction when customer will check in:
 
-## GUI
-The file `gui.py` shows a GUI for the same model which can be run locally. On uploading an image the output is shown on the GUI.
-![Output](https://user-images.githubusercontent.com/84326897/179828761-d178920e-d80d-4504-9d63-0bebb8fbdbec.png)
+![local check](https://user-images.githubusercontent.com/84326897/185669197-94173fe2-fe6d-4af7-9be8-addad590b0f0.png)
 
+Prediction when customer will not check in:
+
+![local not check](https://user-images.githubusercontent.com/84326897/185669328-185493f6-a119-4a4f-b677-773a124f2120.png)
+
+## Deployment
+The model created using the Flask's Rest API and is deployed using heroku to do real time predictions:
+
+Prediction when customer will check in:
+
+![heroku check](https://user-images.githubusercontent.com/84326897/185670042-a4fb9b66-3796-4588-bd90-a198fa52477f.png)
+
+Prediction when customer will not check in:
+
+![heroku not check](https://user-images.githubusercontent.com/84326897/185670136-9f815f11-1ffe-40cd-9ac4-dc211d922735.png)
 
 ## Achievement
-What this project was designed for was to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset. Instead of tackling the MNIST sets, I wanted to do something different but just as similar. Typical MNIST dataset tutorials give you a preprocessed dataset all in one line of
-code. Where's the fun in that? Where's the data pre-processing? I opted for doing all that by myself and it seemed to work in my favor.
-
+What this project is designed for is to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset.
 
 **IF YOU FIND ANY ISSUES OR BUGS PLEASE OPEN AN ISSUE**
