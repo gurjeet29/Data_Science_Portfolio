@@ -55,10 +55,80 @@ This project was developed off the data (provided [here](https://github.com/gurj
 * SRQuietRoom : Indication if the customer usually asks for a room away from the noise (0: No, 1: Yes)
 
 ## Training
-A fucntion id created with the follwoing parametrs:
+A fucntion is created with the follwoing parameters:
+
 ```
 optimizerL = ['SGD', 'Adam', 'RMSprop', 'Adadelta', 'Adagrad', 'Adamax', 'Nadam', 'Ftrl','SGD']
+    
+optimizerD= {'Adam':Adam(lr=learning_rate), 'SGD':SGD(lr=learning_rate),
+                 'RMSprop':RMSprop(lr=learning_rate), 'Adadelta':Adadelta(lr=learning_rate),
+                 'Adagrad':Adagrad(lr=learning_rate), 'Adamax':Adamax(lr=learning_rate),
+                 'Nadam':Nadam(lr=learning_rate), 'Ftrl':Ftrl(lr=learning_rate)}
+
+activationL = ['relu', 'sigmoid', 'softplus', 'softsign', 'tanh', 'selu', 'elu', 'exponential', 'LeakyReLU','relu']
 ```
+
+The range of hyperparameters are set and the Bayesian Optimization is runned:
+```
+params_nn ={
+    'neurons': (10, 100),
+    'activation':(0, 9),
+    'optimizer':(0,7),
+    'learning_rate':(0.01, 1),
+    'batch_size':(200, 1000),
+    'epochs':(20, 100)
+}
+
+nn_bo = BayesianOptimization(nn_cl_bo, params_nn, random_state=111)
+nn_bo.maximize(init_points=25, n_iter=4)
+```
+
+The model is fined tuned and runned to get the best hyperparameters for the final training:
+```
+params_nn2 ={
+    'neurons': (10, 100),
+    'activation':(0, 9),
+    'optimizer':(0,7),
+    'learning_rate':(0.01, 1),
+    'batch_size':(200, 1000),
+    'epochs':(20, 100),
+    'layers1':(1,3),
+    'layers2':(1,3),
+    'normalization':(0,1),
+    'dropout':(0,1),
+    'dropout_rate':(0,0.3)
+}
+
+nn_bo = BayesianOptimization(nn_cl_bo2, params_nn2, random_state=111)
+nn_bo.maximize(init_points=25, n_iter=4)
+```
+
+Training the Neural Network with the best tuned parameters:
+```
+model = Sequential()
+model.add(Dense(params_nn_['neurons'], input_dim=X_train.shape[1], activation=params_nn_['activation']))
+
+if params_nn_['normalization'] > 0.5:
+  model.add(BatchNormalization())
+
+for i in range(params_nn_['layers1']):
+  model.add(Dense(params_nn_['neurons'], activation=params_nn_['activation']))
+
+if params_nn_['dropout'] > 0.5:
+  model.add(Dropout(params_nn_['dropout_rate'], seed=123))
+
+for i in range(params_nn_['layers2']):
+  model.add(Dense(params_nn_['neurons'], activation=params_nn_['activation']))
+
+model.add(Dense(1, activation='sigmoid'))
+
+model.compile(loss='binary_crossentropy', optimizer=params_nn_['optimizer'], metrics=['accuracy'])
+model.summary()
+        
+es = EarlyStopping(monitor='accuracy', mode='max', verbose=0, patience=20)
+```
+The output layer consist of `1` neuron with activation function `sigmoid` and loss `binary_crossentropy`. After tharing the model the best max value obtained for accuracy wad `97.4%` and the best max value obtained for validation accuracy was `97.6%`.
+
 The model and the pre-trained weights are saved in an **h5** file. Saving the model there would allow us to make predictions quicker.
 
 ## Testing
