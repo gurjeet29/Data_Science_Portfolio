@@ -11,3 +11,5 @@
   - [Face Emotion Recognition](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Face%20Emotion%20Recognition): Facial expression recognition is the task of classifying the expressions on face images into various categories such as anger, fear, surprise, sadness, happiness and so on.
 
   - [Object Detection](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Object%20Detection%20Using%20SSD%20MobileNet): Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos.
+  
+  - [Hotel Customer Prediction](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Hotel%20Customer%20Prediction): An ANN project that predicts the customers who are going to check-In in a hotel based on their past records. The project can help hotels to keep track of their customers and improve their services as to avoid cancellation. Booking cancellations have a substantial impact in demand management decisions in the hospitality industry.
