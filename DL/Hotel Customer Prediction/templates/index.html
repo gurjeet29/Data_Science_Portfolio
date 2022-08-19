@@ -1,0 +1,215 @@
+{% extends "material/base.html" %} {% block content %}
+<div class="showcase container blue lighten-3">
+    <div class="row">
+        <div class="col 12 m10 offset-ml center">
+            <center>
+                <h2>Hotel Check In Predictor</h2>
+            </center>
+            <p></p>
+            <a href="{{url_for('index')}}" class="btn btn-small blue white-text waves-effect waves-dark">Reset</a>
+        </div>
+
+
+    </div>
+</div>
+<section class="section section-signup">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col s12 m4">
+                <div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+                    <form action="{{ url_for('analyze')}}" method="POST">
+                        <div class="input-field">
+                            <input type="number" id="Age" name="Age" min="1" max="100">
+                            <label for="Age">Enter Age</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" id="AverageLeadTime" name="AverageLeadTime">
+                            <label for="AverageLeadTime">Enter Average Lead Time</label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="MarketSegment" name="MarketSegment">
+                                <option value="" disabled selected>Select Market Segment</option>
+                                <option value="0">Aviation</option>
+                                <option value="1">Complementary</option>
+                                <option value="2">Corporate</option>
+                                <option value="3">Direct</option>
+                                <option value="4">Groups</option>
+                                <option value="5">TA/TO</option>
+                                <option value="6">Others</option>
+                            </select>
+                            <label for="MarketSegment"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="DistributionChannel" name="DistributionChannel">
+                                <option value="" disabled selected>Select Distribution Channel</option>
+                                <option value="0">Corporate</option>
+                                <option value="1">Direct</option>
+                                <option value="2">Electronic Distribution</option>
+                                <option value="3">TA/TO</option>
+                            </select>
+                            <label for="DistributionChannel"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRHighFloor" name="SRHighFloor">
+                                <option value="" disabled selected>Do You Need a Room on High Floor?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRHighFloor"></label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <select id="SRBathtub" name="SRBathtub">
+                                <option value="" disabled selected>Do You Need a Bath Tub?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRBathtub"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRCrib" name="SRCrib">
+                                <option value="" disabled selected>Do You Need a Crib?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRCrib"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRKingSizeBed" name="SRKingSizeBed">
+                                <option value="" disabled selected>Do You Need a King Size Bed?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRKingSizeBed"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRTwinBed" name="SRTwinBed">
+                                <option value="" disabled selected>Do You Need a Twin Bed?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRTwinBed"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRNearElevator" name="SRNearElevator">
+                                <option value="" disabled selected>Do You Need a Room Near Elevator?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRNearElevator"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRNoAlcoholInMiniBar" name="SRNoAlcoholInMiniBar">
+                                <option value="" disabled selected>Do You Want No Alcohol In Mini Bar?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRNoAlcoholInMiniBar"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <select id="SRQuietRoom" name="SRQuietRoom">
+                                <option value="" disabled selected>Do You Want a Quiet Room?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                            <label for="SRQuietRoom"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" id="total_revenue" name="total_revenue" min="1" max="10000">
+                            <label for="total_revenue">Enter Total Revenue</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" id="PersonsperRoom" name="PersonsperRoom" min="1" max="100">
+                            <label for="PersonsperRoom">Enter Number of Persons</label>
+                        </div>
+
+                        <input type="submit" value="Predict">
+                        <input type="reset" value="Clear">
+                    </form>
+                </div>
+            </div>
+            <div class="col s12 m4 offers">
+                <div class="card-panel blue lighten-4 grey-text text-darken-4 z-depth-0">
+                    <p>Age : {{Age}}</p>
+                    <p>Average Lead Time : {{AverageLeadTime}}</p>
+                    <p>Market Segment : {{MarketSegment}}</p>
+                    <p>Distribution Channel: {{DistributionChannel}}</p>
+                    <p>High Floor: {{SRHighFloor}}</p>
+                    <p>Bath Tub: {{SRBathtub}}</p>
+                    <p>Crib: {{SRCrib}}</p>
+                    <p>King Size Bed: {{SRKingSizeBed}} </p>
+                    <p>Twin Bed: {{SRTwinBed}}</p>
+                    <p>Near Elevator: {{SRNearElevator}}</p>
+                    <p>No Alcohol In Mini Bar: {{SRNoAlcoholInMiniBar}}</p>
+                    <p>Quiet Room: {{SRQuietRoom}}</p>
+                    <p>Total Revenue: {{total_revenue}}</p>
+                    <p>Persons Per Room: {{PersonsperRoom}}</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4 offers">
+                <h5>Prediction</h5>
+                <div class="collection" role="alert">
+                    <p class="collection-item active blue"> The Chances of Cancellation are {{can_prediction}} % </p>
+                </div>
+                <div class="card-image waves-effect waves-block waves-light">
+                    {% if final_prediction == 'not Check In' %}
+                    <center>
+                        <img src="static/close.png" width="200px" height="200px" display="block" margin-left="auto" margin-right="auto">
+                        <h5><b>The customer will not Check In.</b></h5>
+                    </center>
+                    {% elif final_prediction == 'Check In' %}
+                    <center>
+                        <img src="static/checkbox.png" width="200px" height="200px" display="block" margin-left="auto" margin-right="auto">
+                        <h5><b>The customer will Check In.</b></h5>
+                    </center>
+                    {% else %}
+                    <p></p>
+
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %} {% block scripts %} {{super()}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!-- <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var instances = M.FormSelect.init(elems, options);
+ });
+</script> -->
+
+<script>
+    // Or with jQuery
+
+    $(document).ready(function() {
+        $('select').formSelect();
+    });
+</script>
+
+
+
+{% endblock %}
