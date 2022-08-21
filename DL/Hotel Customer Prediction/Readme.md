@@ -1,6 +1,8 @@
 # Hotel Customer Prediction
 
-The dataset can be found in the github repo [here.](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Hotel%20Customer%20Prediction)
+The dataset can be found in the github repo [here.](https://github.com/gurjeet29/hotel_customer_predictor_and_regex)
+
+**The deployed model can be found on this link: https://hotel-customer-predictor.herokuapp.com/**
 
 ## Project Objective
 The purpose of this project is to predict the customers who are going to Check-In in a hotel based on their past records. The project can help hotels to keep track of their customers and improve their services as to avoid cancellation. Booking cancellations have a substantial impact in demand management decisions in the hospitality industry.
@@ -22,7 +24,7 @@ The purpose of this project is to predict the customers who are going to Check-I
 * Flask
 
 ## Project Description
-This project was developed off the data (provided [here](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Hotel%20Customer%20Prediction)) which consisted of train and test set in two different csv files with the following features:
+This project was developed off the data (provided [here](https://github.com/gurjeet29/hotel_customer_predictor_and_regex)) which consisted of train and test set in two different csv files with the following features:
 
 * ID : Customer ID
 * Nationality : Country of origin
@@ -159,6 +161,35 @@ Prediction when customer will not check in:
 
 ![heroku not check](https://user-images.githubusercontent.com/84326897/185672138-0a9f456b-ee10-4a87-91c6-04ceeff8178d.png)
 
+## Run App Locally
+To run the app in your local machine: (make sure you have python installed in your local machine)
+
+1) Using cmd change your directory to Desktop:
+
+   `cd Desktop/`
+
+2) Git Clone this repo:
+   
+   `git clone https://github.com/gurjeet29/hotel_customer_predictor_and_regex.git`
+
+3) Change your directory to this cloned folder:
+
+   `cd hotel_customer_predictor_and_regex`
+   
+4) Install the requirements:
+
+   `pip install -r requirements.txt`
+   
+5) Run the app:
+
+   `python app.py`
+ 
+6) Copy paste the link in your browser (link will be something like below):
+
+   `http://127.0.0.1:5000`
+
+Fill all the input fields and click on predict button to do the prediction.
+   
 ## Achievement
 What this project is designed for is to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset.
 
