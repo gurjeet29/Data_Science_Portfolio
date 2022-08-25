@@ -1,5 +1,7 @@
 # Movies Recommendation System
 
+## The deployed app can be found here: https://movies-recommendation-system-0.herokuapp.com/
+
 ## The datasets are collected form different sources.The links can be found below:
 1. [IMDB 5000 Movie Dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 2. [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset)
@@ -47,7 +49,11 @@ Cosine similarity is a metric used to measure how similar the documents are irre
 
 More about Cosine Similarity : [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
-## Architecture
+## Deployment
+The model is deployed on heroku using streamlit:
 
+Deployed model: https://movies-recommendation-system-0.herokuapp.com/
+
+![image](https://user-images.githubusercontent.com/84326897/186660548-58b8b110-1600-4f3c-8ca8-dc9ab5191424.png)
 
 **IF YOU FIND ANY ISSUES OR BUGS PLEASE OPEN AN ISSUE**
