@@ -160,35 +160,6 @@ Prediction when customer will check in:
 Prediction when customer will not check in:
 
 ![heroku not check](https://user-images.githubusercontent.com/84326897/185672138-0a9f456b-ee10-4a87-91c6-04ceeff8178d.png)
-
-[//]: # (## Run App Locally
-To run the app in your local machine: (make sure you have python installed in your local machine)
-
-1) Using cmd change your directory to Desktop:
-
-   `cd Desktop/`
-
-2) Git Clone this repo:
-   
-   `git clone https://github.com/gurjeet29/hotel_customer_predictor_and_regex.git`
-
-3) Change your directory to this cloned folder:
-
-   `cd hotel_customer_predictor_and_regex`
-   
-4) Install the requirements:
-
-   `pip install -r requirements.txt`
-   
-5) Run the app:
-
-   `python app.py`
- 
-6) Copy paste the link in your browser (link will be something like below):
-
-   `http://127.0.0.1:5000`
-
-Fill all the input fields and click on predict button to do the prediction.)
    
 ## Achievement
 What this project is designed for is to mainly test my knowledge about deep learning and whether or not I can make a reliable model based off a dataset.
