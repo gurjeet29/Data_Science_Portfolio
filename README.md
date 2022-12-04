@@ -29,6 +29,8 @@ Repository containing portfolio of data science projects completed by me for sel
 
 	- [Zomato Predictive Analytics](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/ML/Zomato%20Predective%20Analysis): Zomato Predictive Analytics explores a sneak peek into the Zomato restaurants data and which might help answer a few important questions.
 	
+	- [Adult Census Income Prediction](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/ML/Adult%20Census%20Income%20Prediction): The Goal is to predict whether a person has an income of more than 50K a year or not. This is basically a binary classification problem where a person is classified into the >50K group or <=50K group.
+	
 	
 - ### Deep Learning
 
