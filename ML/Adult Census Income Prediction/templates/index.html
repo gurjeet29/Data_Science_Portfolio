@@ -1,0 +1,175 @@
+{% extends "material/base.html" %} {% block content %}
+<div class="showcase container blue lighten-3">
+    <div class="row">
+        <div class="col 12 m10 offset-ml center">
+            <center>
+                <h2>Income Predictor</h2>
+            </center>
+            <p></p>
+            <a href="{{url_for('index')}}" class="btn btn-small blue white-text waves-effect waves-dark">Reset</a>
+        </div>
+
+
+    </div>
+</div>
+<section class="section section-signup">
+    <div class="container">
+        <div class="row">
+
+
+            <center>
+                <div class="col s9 m9">
+                    <div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+                        <form action="{{ url_for('predict')}}" method="POST">
+                            <center>
+                                <div class="input-field">
+                                    <input type="number" id="age" name="age" min="1" max="100" required>
+                                    <label for="age">Enter your Age</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="marital_status" name="marital_status" required>
+                                        <option value="" disabled selected>Select Marital Status</option>
+                                        <option value="0">Single</option>
+                                        <option value="1">Married</option>
+                                    </select>
+                                    <label for="marital_status"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="sex" name="sex" required>
+                                        <option value="" disabled selected>Select your Gender</option>
+                                        <option value="0">Female</option>
+                                        <option value="1">Male</option>
+                                    </select>
+                                    <label for="sex"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="education" name="education" required>
+                                        <option value="" disabled selected>Select your Highest Level of Education
+                                        </option>
+                                        <option value="Preschool">Preschool</option>
+                                        <option value="1st-4th">1st-4th</option>
+                                        <option value="5th-6th">5th-6th</option>
+                                        <option value="7th-8th">7th-8th</option>
+                                        <option value="9th">9th</option>
+                                        <option value="10th">10th</option>
+                                        <option value="11th">11th</option>
+                                        <option value="12th">12th</option>
+                                        <option value="HS-grad">HS-grad</option>
+                                        <option value="Some-college">Some-college</option>
+                                        <option value="Assoc-voc">Assoc-voc</option>
+                                        <option value="Assoc-acdm">Assoc-acdm</option>
+                                        <option value="Bachelors">Bachelors</option>
+                                        <option value="Masters">Masters</option>
+                                        <option value="Prof-school">Prof-school</option>
+                                        <option value="Doctorate">Doctorate</option>
+                                    </select>
+                                    <label for="education"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <input type="number" id="hours_per_week" name="hours_per_week" min="1" max="168"
+                                        required>
+                                    <label for="hours_per_week">How many hours do you work per week?</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="gain_or_loss" name="gain_or_loss" required>
+                                        <option value="" disabled selected>Did you face any capital gain/loss this year?
+                                        </option>
+                                        <option value="0">None</option>
+                                        <option value="1">Gain</option>
+                                        <option value="1">Loss</option>
+                                    </select>
+                                    <label for="gain_or_loss"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="country" name="country" required>
+                                        <option value="" disabled selected>Select your Country</option>
+                                        <option value="0">Non-US</option>
+                                        <option value="1">US</option>
+                                    </select>
+                                    <label for="country"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="employment_type" name="employment_type" required>
+                                        <option value="" disabled selected>Select your Employment Type</option>
+                                        <option value="1">Private</option>
+                                        <option value="2">Government</option>
+                                        <option value="3">Self-Employed</option>
+                                        <option value="4">Unemployed</option>
+                                    </select>
+                                    <label for="employment_type"></label>
+                                </div>
+
+                                <div class="input-field">
+                                    <select id="occupation" name="occupation" required>
+                                        <option value="" disabled selected>Select your Occupation</option>
+                                        <option value="Adm clerical">Adm clerical</option>
+                                        <option value="Armed Forces">Armed Forces</option>
+                                        <option value="Craft repair">Craft repair</option>
+                                        <option value="Exec managerial">Exec managerial</option>
+                                        <option value="Farming fishing">Farming fishing</option>
+                                        <option value="Handlers cleaners">Handlers cleaners</option>
+                                        <option value="Machine op inspct">Machine op inspct</option>
+                                        <option value="Other service">Other service</option>
+                                        <option value="Priv house serv">Priv house serv</option>
+                                        <option value="Prof specialty">Prof specialty</option>
+                                        <option value="Protective serv">Protective serv</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="Tech support">Tech support</option>
+                                        <option value="Transport moving">Transport moving</option>
+                                    </select>
+                                    <label for="occupation"></label>
+                                </div>
+
+                                <input type="submit" value="Predict">
+                                <input type="reset" value="Clear">
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </center>
+
+
+            <div class="col s9 m9 offers">
+                <center>
+                    <h5>Prediction</h5>
+                </center>
+                <div class="collection" role="alert">
+                    <p class="collection-item active blue">{{prediction}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %} {% block scripts %} {{super()}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!-- <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var instances = M.FormSelect.init(elems, options);
+ });
+</script> -->
+
+<script>
+    // Or with jQuery
+
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script>
+
+
+
+{% endblock %}
