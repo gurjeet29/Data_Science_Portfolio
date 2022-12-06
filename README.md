@@ -7,7 +7,7 @@ Repository containing portfolio of data science projects completed by me for sel
 
 ## Contents
 
-- ### Machine Learning
+- ### Machine Learning (ML)
 
 	- [IRIS Data Classification](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/ML/Iris%20Data): A model to predict a flower class based on its specific features using various statistical analysis tools. The dataset contains three classes of flowers, **Versicolor**, **Setosa**, **Virginica**, and each class contains 4 features, ‘**Sepal length**’, ‘**Sepal width**’, ‘**Petal length**’, ‘**Petal width**’.
 
@@ -32,7 +32,7 @@ Repository containing portfolio of data science projects completed by me for sel
 	- [Adult Census Income Prediction](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/ML/Adult%20Census%20Income%20Prediction): The Goal is to predict whether a person has an income of more than 50K a year or not. This is basically a binary classification problem where a person is classified into the >50K group or <=50K group.
 	
 	
-- ### Deep Learning
+- ### Deep Learning (DL)
 
 	- [Butterfly Species Classification](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/DL/Butterfly%20Species%20Classification): A deep learning model to predict butterfly species by giving an image as an input.
 
@@ -58,7 +58,12 @@ Repository containing portfolio of data science projects completed by me for sel
 	- [Spam Classifier](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Spam%20Classifier): A NLP model to classifiy sentences or emails as SPAM or HAM.
 	
 	- [Movies Recommendation System](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/NLP/Movies%20Recommendation%20System): A NLP model which recommends moviees to user based on Cosine Similarity.
+	
+	
+- ### Exploratory Data Analysis (EDA)
 
+	- [Superstore EDA](https://github.com/gurjeet29/Data_Science_Portfolio/tree/main/EDA/Superstore%20EDA): A deep Exploratory Data Analysis of US Superstore to Explore Buisness Analytics to find out the weak areas where we can work to make more profit and deriving the business problems by exploring the data.
+	
 
 ___Tools: scikit-learn, Pandas, Seaborn, Matplotlib, Numpy, Tensorflow, Flask, NLTK, Keras, OpenCV___
 
